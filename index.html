@@ -4,24 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRUPO CGR | Constructora - Obra Civil y Remodelaciones en Puebla</title>
-    <!-- FontAwesome para Iconos -->
+    <title>GRUPO CGR | Excelencia en Construcción y Remodelación</title>
+    <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
+    <!-- Fuentes de Google -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Open+Sans:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Barra de progreso de lectura -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
-    <!-- Header Navigation -->
-    <header class="header">
+    <!-- Header -->
+    <header class="header" id="header">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-title">GRUPO CGR</span>
-                <span class="logo-subtitle">CONSTRUCCIONES CIVILES</span>
+            <!-- LOGO HEADER: Solo cambia el 'src' por la ruta de tu logo -->
+            <a href="#inicio" class="logo">
+                <img src="./assets/logo-grupocgr.png" alt="Logo Grupo CGR" class="logo-img" id="header-logo">
+                <div class="logo-text">
+                    <span class="logo-title">GRUPO CGR</span>
+                    <span class="logo-subtitle">CONSTRUCCIONES</span>
+                </div>
             </a>
 
             <nav class="nav-menu" id="nav-menu">
@@ -30,59 +37,56 @@
                     <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                     <li><a href="#servicios" class="nav-link">Servicios</a></li>
                     <li><a href="#galeria" class="nav-link">Galería</a></li>
-                    <li><a href="#cotizacion" class="nav-link btn-header">Cotizar sin Costo</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#testimonios" class="nav-link">Reseñas</a></li>
+                    <li>
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar Modo Oscuro/Claro">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                    <li><a href="#cotizacion" class="btn btn-header nav-link-btn">Cotizar Gratis</a></li>
                 </ul>
             </nav>
 
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="badge">Puebla y Alrededores</span>
-            <h1>Construimos tus Sueños con Excelencia y Calidad</h1>
-            <p>Especialistas en Obra Civil, Remodelaciones y Mantenimiento Residencial. Proyectos garantizados a tu
-                medida.</p>
+        <div class="hero-content reveal">
+            <span class="badge"><i class="fas fa-medal"></i> Construcción Premium en Puebla</span>
+            <h1>Diseñamos y construimos: <br> <span class="typewriter" id="typewriter"></span><span
+                    class="cursor">|</span></h1>
+            <p>Fusionamos ingeniería de precisión, arquitectura vanguardista y ejecución impecable para crear espacios
+                excepcionales. Seguridad y calidad en cada proyecto.</p>
             <div class="hero-buttons">
-                <a href="#cotizacion" class="btn btn-primary"><i class="fas fa-calculator"></i> Solicitar Cotización
-                    Gratis</a>
-                <a href="https://wa.me/5212216559132" target="_blank" class="btn btn-whatsapp"><i
-                        class="fab fa-whatsapp"></i> Chatear por WhatsApp</a>
+                <a href="#cotizacion" class="btn btn-primary"><i class="fas fa-project-diagram"></i> Iniciar
+                    Proyecto</a>
+                <a href="#galeria" class="btn btn-outline"><i class="fas fa-images"></i> Ver Portafolio</a>
             </div>
         </div>
+        <a href="#stats" class="scroll-down-btn"><i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <!-- Sobre la Empresa -->
-    <section id="nosotros" class="about section-padding">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80"
-                        alt="Obra en construcción Grupo CGR">
-                    <div class="experience-card">
-                        <i class="fas fa-building"></i>
-                        <span>Calidad Garantizada</span>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h4 class="section-subtitle">Sobre Nosotros</h4>
-                    <h2 class="section-title">Líderes en Construcción y Remodelación en Puebla</h2>
-                    <p>En <strong>GRUPO CGR</strong> nos especializamos en transformar espacios y llevar a cabo
-                        proyectos arquitectónicos y estructurales de alto nivel. Nos distinguimos por nuestra atención
-                        al detalle, cumplimiento de tiempos y la satisfacción de nuestros clientes.</p>
-                    <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Cotizaciones 100% sin costo.</li>
-                        <li><i class="fas fa-check-circle"></i> Personal técnico altamente capacitado.</li>
-                        <li><i class="fas fa-check-circle"></i> Cobertura en Puebla City y zonas conurbadas.</li>
-                        <li><i class="fas fa-check-circle"></i> Renta de maquinaria e equipo especializado.</li>
-                    </ul>
-                </div>
+    <!-- Stats Bar -->
+    <section id="stats" class="stats-bar reveal">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <h3 class="counter" data-target="250">0</h3>
+                <p>Obras Entregadas</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="counter" data-target="15">0</h3>
+                <p>Años de Prestigio</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="counter" data-target="100">0</h3>
+                <p>% Satisfacción</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="counter" data-target="50">0</h3>
+                <p>Expertos en Campo</p>
             </div>
         </div>
     </section>
@@ -90,185 +94,245 @@
     <!-- Servicios -->
     <section id="servicios" class="services section-padding">
         <div class="container">
-            <div class="text-center">
-                <h4 class="section-subtitle">Lo Que Hacemos</h4>
-                <h2 class="section-title">Nuestros Servicios Principales</h2>
+            <div class="section-header reveal">
+                <h4 class="section-subtitle">Especialidad Operativa</h4>
+                <h2 class="section-title">Soluciones Constructivas Integrales</h2>
             </div>
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-hard-hat"></i></div>
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-helmet-safety"></i></div>
                     <h3>Obra Civil</h3>
-                    <p>Construcción de estructuras residenciales y comerciales desde cimentación hasta acabados finales.
-                    </p>
+                    <p>Desarrollo estructural sólido y cimentaciones seguras para proyectos residenciales y comerciales
+                        de alto impacto, cumpliendo estrictas normas de seguridad.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card reveal">
                     <div class="icon-box"><i class="fas fa-hammer"></i></div>
-                    <h3>Remodelaciones</h3>
-                    <p>Renovación total o parcial de interiores y exteriores para transformar tus espacios habitables.
-                    </p>
+                    <h3>Remodelación</h3>
+                    <p>Modernizamos espacios con diseños vanguardistas, maximizando la plusvalía, estética y
+                        funcionalidad integral de tu inmueble.</p>
                 </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-tools"></i></div>
-                    <h3>Mantenimiento Residencial</h3>
-                    <p>Servicios preventivos y correctivos de plomería, pintura, impermeabilización y electricidad.</p>
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Arquitectura 3D</h3>
+                    <p>Visualiza tu proyecto antes de invertir. Creamos renders fotorrealistas y recorridos virtuales
+                        para garantizar tu entera satisfacción.</p>
                 </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class="fas fa-truck-pickup"></i></div>
-                    <h3>Renta de Maquinaria</h3>
-                    <p>Renta de andamios, vibradores de concreto, bailarinas compactadoras y generadores de luz.</p>
+                <div class="service-card reveal">
+                    <div class="icon-box"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Acabados Premium</h3>
+                    <p>La diferencia está en los detalles. Expertos en instalación de pisos de lujo, plafones
+                        decorativos, pintura arquitectónica y carpintería fina.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Galería de Imágenes -->
+    <!-- Galería con Filtros JS -->
     <section id="galeria" class="gallery section-padding">
         <div class="container">
-            <div class="text-center">
-                <h4 class="section-subtitle">Portafolio</h4>
-                <h2 class="section-title">Galería de Proyectos</h2>
+            <div class="section-header reveal">
+                <h4 class="section-subtitle">Nuestro Legado Visial</h4>
+                <h2 class="section-title">Portafolio de Excelencia</h2>
+            </div>
+            <div class="filter-buttons reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="obra">Estructuras</button>
+                <button class="filter-btn" data-filter="interiores">Interiores</button>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <div class="gallery-item reveal" data-category="interiores">
                     <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-                        alt="Remodelación">
-                    <div class="gallery-overlay"><span>Remodelación Residencial</span></div>
+                        alt="Interior">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Residencia Minimalista</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal" data-category="obra">
                     <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80"
-                        alt="Obra Civil">
-                    <div class="gallery-overlay"><span>Obra Civil</span></div>
+                        alt="Estructura">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Cimentación Comercial</span>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80"
-                        alt="Renta de Equipo">
-                    <div class="gallery-overlay"><span>Equipo y Maquinaria</span></div>
-                </div>
-                <div class="gallery-item">
+                <div class="gallery-item reveal" data-category="interiores">
                     <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80"
-                        alt="Mantenimiento">
-                    <div class="gallery-overlay"><span>Acabados e Interiores</span></div>
+                        alt="Acabados">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                        <span>Acabados de Lujo</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cotización -->
+    <!-- Testimonios (Carrusel JS) -->
+    <section id="testimonios" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h4 class="section-subtitle">Respaldo y Confianza</h4>
+                <h2 class="section-title">La Voz de Nuestros Clientes</h2>
+            </div>
+            <div class="testimonial-slider reveal">
+                <div class="testimonial-track" id="testimonial-track">
+                    <div class="testimonial-slide active">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"El equipo de CGR transformó nuestra casa por completo. Cumplieron con el tiempo exacto y el
+                            presupuesto estipulado. Calidad incuestionable."</p>
+                        <h4>Ing. Roberto Martínez</h4>
+                        <span>Proyecto Residencial en Angelópolis</span>
+                    </div>
+                    <div class="testimonial-slide">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Excelente atención al detalle en la obra civil de nuestras nuevas oficinas corporativas.
+                            Fueron sumamente profesionales y limpios durante todo el proceso."</p>
+                        <h4>Lic. Laura Gómez</h4>
+                        <span>Gerente de Operaciones Comerciales</span>
+                    </div>
+                    <div class="testimonial-slide">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Los recorridos en 3D me ayudaron a tomar decisiones clave antes de gastar en materiales. El
+                            resultado físico superó lo que vi en pantalla."</p>
+                        <h4>Carlos Ruiz</h4>
+                        <span>Inversionista Inmobiliario</span>
+                    </div>
+                </div>
+                <div class="slider-dots" id="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Acordeón -->
+    <section id="faq" class="faq section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h4 class="section-subtitle">Transparencia Total</h4>
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-container reveal">
+                <div class="faq-item">
+                    <button class="faq-question">¿Tienen costo las cotizaciones y visitas técnicas? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>No. Entendemos la importancia de planear correctamente, por ello nuestras visitas técnicas de
+                            evaluación y la elaboración de cotizaciones preliminares son 100% gratuitas y sin ningún
+                            compromiso de compra.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Cuánto tiempo tardan en iniciar los trabajos de obra? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Depende de la magnitud y complejidad del proyecto, pero en términos generales, una vez
+                            firmado el contrato legal y entregado el anticipo correspondiente, movilizamos al equipo en
+                            un lapso de 3 a 7 días hábiles.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">¿Se encargan de la gestión de permisos de construcción? <i
+                            class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Así es, contamos con un área jurídica y gestores especializados que se pueden encargar de
+                            todos los trámites, licencias, uso de suelo y alineamientos ante las dependencias
+                            municipales pertinentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cotización Form -->
     <section id="cotizacion" class="quote section-padding">
-        <div class="container">
-            <div class="quote-wrapper">
-                <div class="quote-info">
-                    <h2>¿Tienes un proyecto en mente?</h2>
-                    <p>Solicita tu <strong>cotización sin costo</strong> para tu obra civil, remodelación o servicio de
-                        mantenimiento en Puebla y alrededores.</p>
-                    <div class="contact-direct">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <span>Llámanos directamente:</span>
-                            <strong>951-251-7490</strong>
-                        </div>
+        <div class="container quote-container reveal">
+            <div class="quote-info">
+                <h2>Hagamos realidad tu visión arquitectónica</h2>
+                <p>Déjanos tus datos. Un ingeniero residente analizará tu solicitud y se pondrá en contacto contigo para
+                    agendar una visita técnica gratuita.</p>
+                <div class="contact-cards">
+                    <div class="c-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <div><span>Asesoría Directa (WhatsApp)</span><strong>+52 1 221 655 9132</strong></div>
                     </div>
-                </div>
-                <form class="quote-form" id="form-cotizacion">
-                    <h3>Solicitar Cotización Gratis</h3>
-                    <div class="form-group">
-                        <input type="text" id="nombre" placeholder="Nombre completo" required>
+                    <div class="c-card">
+                        <i class="fas fa-envelope"></i>
+                        <div><span>Atención Corporativa</span><strong>contacto@grupocgr.com</strong></div>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" id="telefono" placeholder="Número de Teléfono / WhatsApp" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="servicio" required>
-                            <option value="" disabled selected>Selecciona un Servicio</option>
-                            <option value="Obra Civil">Obra Civil</option>
-                            <option value="Remodelación">Remodelación</option>
-                            <option value="Mantenimiento">Mantenimiento Residencial</option>
-                            <option value="Renta de Equipo">Renta de Maquinaria/Equipo</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="mensaje" rows="4" placeholder="Describe brevemente tu proyecto o requerimiento..."
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto y Redes Sociales -->
-    <section id="contacto" class="contact section-padding">
-        <div class="container">
-            <div class="text-center">
-                <h4 class="section-subtitle">Ubicación & Contacto</h4>
-                <h2 class="section-title">Estamos para Atenderte</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Ubicación</h3>
-                    <p>Puebla City y Alrededores, México</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Teléfono Principal</h3>
-                    <p><a href="tel:9512517490">951-251-7490</a></p>
-                </div>
-                <div class="contact-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp Directo</h3>
-                    <p><a href="https://wa.me/5212216559132" target="_blank">+52 1 221 655 9132</a></p>
                 </div>
             </div>
-
-            <div class="social-box">
-                <h3>Síguenos en Nuestras Redes Sociales</h3>
-                <div class="social-links">
-                    <a href="https://www.facebook.com" target="_blank" class="social-btn facebook"><i
-                            class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.instagram.com/constructora.cgr" target="_blank" class="social-btn instagram"><i
-                            class="fab fa-instagram"></i> Instagram (@constructora.cgr)</a>
+            <form class="quote-form" id="form-cotizacion">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ingresa tu nombre..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono de Contacto</label>
+                        <input type="tel" id="telefono" placeholder="A 10 dígitos..." required>
+                    </div>
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="servicio">Servicio de Interés</label>
+                    <select id="servicio" required>
+                        <option value="" disabled selected>Selecciona un área de servicio...</option>
+                        <option value="Obra Civil">Obra Civil y Cimentación</option>
+                        <option value="Remodelación">Remodelación de Espacios</option>
+                        <option value="Proyecto 3D">Proyecto Arquitectónico / 3D</option>
+                        <option value="Acabados">Instalación de Acabados Premium</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Detalles del Proyecto</label>
+                    <textarea id="mensaje" rows="4"
+                        placeholder="Describe brevemente metros cuadrados, tipo de obra, ubicación o dudas generales..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud <i
+                        class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo-title">GRUPO CGR</span>
-                    <span class="logo-subtitle">CONSTRUCCIONES CIVILES</span>
-                    <p>Soluciones integrales de construcción, remodelación y mantenimiento con alta calidad en Puebla.
-                    </p>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <!-- LOGO FOOTER: Cambia el 'src' por la ruta de tu logo (recomendable versión en blanco/monocromática) -->
+                <div class="logo">
+                    <img src="./assets/logo-grupocgr.png" alt="Logo Grupo CGR" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-title">GRUPO CGR</span>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#galeria">Galería</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-info">
-                    <h4>Atención al Cliente</h4>
-                    <p><i class="fas fa-check"></i> Cotizaciones sin costo</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Cobertura en Puebla City</p>
+                <p>Transformando el horizonte urbano con innovación, ética profesional y solidez estructural garantizada
+                    en cada obra y proyecto.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 GRUPO CGR | Constructora. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <h4>Accesos Directos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Perfil Corporativo</a></li>
+                    <li><a href="#servicios">Servicios y Especialidades</a></li>
+                    <li><a href="#galeria">Catálogo de Proyectos</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Información de Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Puebla City, México</p>
+                <p><i class="fas fa-phone"></i> (951) 251-7490</p>
+                <p><i class="fas fa-clock"></i> Lun - Sáb: 8:00 AM - 6:00 PM</p>
             </div>
         </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GRUPO CGR Construcciones Civiles. Todos los derechos reservados.</p>
+        </div>
     </footer>
-
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/5212216559132" target="_blank" class="float-whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
     <script src="script.js"></script>
 </body>
